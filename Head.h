@@ -40,3 +40,38 @@ void Scatter(int arr[], uint32_t _size)
     }
 }
 //+------------------------------
+void Descending(int arr[], uint32_t _size, uint32_t pos)
+{
+    int temp;
+    for (uint32_t i = 0; i < pos; i++)
+    {
+        for (uint32_t j = 0; j < pos - 1; j++)
+        {
+            if (arr[j] < arr[j + 1])
+            {
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+//+------------------------------
+void Increase(int arr[], uint32_t _size, uint32_t pos)
+{
+    int temp;
+    for (uint32_t i = pos; i < _size; i++)
+    {
+        for (uint32_t j = pos; j < _size - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+
+}
+//+------------------------------
